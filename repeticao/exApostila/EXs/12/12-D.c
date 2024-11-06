@@ -4,7 +4,14 @@ e imprima o tempo necessário para que a população do país A ultrapasse a pop
 
 #include <stdio.h>
 int main(){
-
-
-    return 0;
+	int ano=0, popA, popB;
+	popA=500;
+	popB=700;
+	do{
+		popA= popA*1.03;
+		popB= popB*1.02;
+		ano++;
+	}while(popA<popB);
+	printf(">> %d", ano);
+	return 0;
 }

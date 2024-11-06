@@ -2,8 +2,18 @@
 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo deverá cessar sua execução.*/
 
 #include <stdio.h>
+
 int main(){
-
-
-    return 0;
+	int num, con=0;
+	do{
+		printf(">> ");
+		scanf("%d", &num);
+		if(num>=100 && num<=200){
+		con++;
+		}
+		
+	}while(num!=0);
+	printf(">> %d", con);
+	
+	return 0;
 }

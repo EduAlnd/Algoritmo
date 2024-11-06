@@ -3,7 +3,16 @@
 
 #include <stdio.h>
 int main(){
-
-
-    return 0;
+	int num, con=0;
+	while(num!=0){
+		printf(">> ");
+		scanf("%d", &num);
+		if(num>=100 && num<=200){
+		con++;
+		}
+		
+	}
+	printf(">> %d", con);
+	
+	return 0;
 }

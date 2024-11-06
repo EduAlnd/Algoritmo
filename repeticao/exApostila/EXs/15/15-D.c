@@ -3,8 +3,20 @@
 • total de pessoas com mais de 50 anos*/
 
 #include <stdio.h>
+
 int main(){
-
-
-    return 0;
+	int idade = -1, m21= 0,M50 = 0;
+	do{
+		printf(">> ");
+		scanf("%d", &idade);
+		if(idade>=50){
+			M50++;
+		}
+		else if(idade<=21 && idade>0){
+			m21++;
+		}
+	}while(idade!=0);
+	printf(">> %d\n", m21);
+	printf(">> %d", M50);
+	return 0;
 }

@@ -7,7 +7,25 @@ seja maior do que o divisor.*/
 
 #include <stdio.h>
 int main(){
-
-
-    return 0;
+	int result, n1, n2, divisor, divi;
+	printf(">> ");
+	scanf("%d", &n1);
+	printf(">> ");
+	scanf("%d", &n2);
+	if(n1>n2){
+		divisor=n2;
+		divi=n1;
+	}
+	else if(n2>n1){
+		divisor=n1;
+		divi=n2;
+	}
+	else{
+		return 0;
+	}
+	for(divi;divi>divisor;divi){
+		divi = divi - divisor;
+	}
+	printf(">> %d ", divi);
+	return 0;
 }
