@@ -4,13 +4,21 @@ sejam positivos e que o multiplicando seja menor do que o multiplicador.*/
 
 #include <stdio.h>
 int main(){
-int n1, n2, res;
+int n1, n2, res, maior, menor;
 printf("Produto de dois num, atraves de repetidas somas\n");
     printf(">> ");
     scanf("%d %d", &n1, &n2);
-    while(n2>=1){
+     if(n1>=n2){
+        maior=n1;
+        menor= n2;
+    }
+    else{
+        maior=n2;
+        menor=n1;
+    }
+    while(menor>=1){
         res += n1;
-        n2--;
+        menor--;
 
     }
     printf("O produto e' %d\n", res);

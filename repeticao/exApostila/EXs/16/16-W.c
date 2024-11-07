@@ -23,7 +23,7 @@ int main(){
 	else{
 		return 0;
 	}
-	while(divi>divisor){
+	while(divi>=divisor){
 		divi = divi - divisor;
 	}
 	printf(">> %d ", divi);

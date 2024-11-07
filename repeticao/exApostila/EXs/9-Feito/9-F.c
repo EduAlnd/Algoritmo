@@ -28,7 +28,7 @@ for(con=20; con>=1;con--){
     }
     else{
 
-        printf("Erro");
+printf("Erro");
     return 1;
     }
     

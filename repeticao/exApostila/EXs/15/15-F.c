@@ -15,7 +15,7 @@ int main(){
 			m21++;
 		}
 	}
-	printf(">> %d\n", m21);
-	printf(">> %d", M50);
+	printf("Menor que 21: %d\n", m21);
+	printf("Maior que 50: %d", M50);
 	return 0;
 }

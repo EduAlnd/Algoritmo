@@ -25,7 +25,7 @@ int main(){
 	}
     	do{
 		divi = divi - divisor;
-	}while(divi>divisor);
+	}while(divi>=divisor);
 	printf(">> %d ", divi);
 	return 0;
 }
