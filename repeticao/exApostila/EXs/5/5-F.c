@@ -11,7 +11,7 @@ printf("Produto de dois num, atraves de repetidas somas\n");
     if(n1>=n2){
         maior=n1;
         menor= n2;
-    }
+}
     else{
         maior=n2;
         menor=n1;
