@@ -3,6 +3,14 @@ até n usando as estruturas de repetição for, while e do-while. Exiba um núme
 #include <stdio.h>
 
 int main(){
-
+int n;
+printf(">> ");
+scanf("%d", &n);
+do{
+    if(n%2==1){
+        printf(">> %d\n", n); 
+    }
+    n--;
+}while(n>=1);
 return 0;
 }

@@ -4,6 +4,13 @@ x i = res.*/
 #include <stdio.h>
 
 int main(){
-
+int n, i=1, res;
+printf(">> ");
+scanf("%d", &n);
+while(i<=10){
+    res=n*i;
+    printf("%d x %d = %d\n",n, i, res);
+    i++;
+}
 return 0;
 }

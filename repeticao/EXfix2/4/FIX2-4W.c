@@ -3,6 +3,15 @@ utilizando as estruturas de repetição while e do-while.*/
 #include <stdio.h>
 
 int main(){
+int n, aux, res=1;
+printf(">> ");
+scanf("%d", &n);
+aux=n;
+while(n>=1){
+ res=res * n;
+    n--;
+}
 
+printf(">> %d! = %d",aux,res);
 return 0;
 }
