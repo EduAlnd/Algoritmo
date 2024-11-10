@@ -3,6 +3,13 @@ uma estrutura de repetição while para realizar o cálculo. */
 #include <stdio.h>
 
 int main(){
-
+int n, res=0;
+printf(">> ");
+scanf("%d", &n);
+do{
+res+=n%10;
+n=n/10;
+}while(n!=0);
+printf("%d", res);
 return 0;
 }

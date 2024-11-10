@@ -4,6 +4,14 @@ repetição do-while. */
 #include <stdio.h>
 
 int main(){
+int n, con;
+for(n;n>=0;n){
+printf(">> ");
+scanf("%d", &n);
+if(n%2==0){con++;}
 
+}
+if(n<0 && n%2==0){con--;}
+printf("%d", con);
 return 0;
 }

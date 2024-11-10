@@ -5,6 +5,14 @@ cada termo em uma linha.*/
 #include <stdio.h>
 
 int main(){
-
+int f=1, aux=0, n, res=1;
+printf(">> ");
+scanf("%d", &n);
+for(n;n>=1;n--){
+    printf("%d\n", res);
+    res=f+aux;
+    aux=f;
+    f=res;
+}
 return 0;
 }

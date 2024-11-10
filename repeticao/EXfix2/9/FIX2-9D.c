@@ -6,24 +6,33 @@ o próprio número. */
 #include <stdio.h>
 
 int main(){
-int n, i=2, res=0;
+int n, i=2, res=4;
 printf(">> ");
 scanf("%d", &n);
 do{
-    if(i%2==0 || i%3==0 || i%5==0 || i%7==0){ i++; }
-    if (n%i==0){
-       if(n==i){printf("E primo"); return 0;}
-       else{printf("Não e primo é divisivel por %d", i); return 0;}
+    if(n==2 || n==3 || n==5 || n==7){
+        printf("E primo 3"); 
+        return 0;
+        }
+    else if (n%i==0){
+       if(n==i){
+        printf("E primo 2"); 
+        return 0;
+        }
+       else{
+        printf("Não e primo é divisivel por %d", i); 
+        return 0;
+        }
     }
+    
     else{
         res= n/i;
         i++;
     }
-
 }while(i<res);
-if(i>res){
+
 printf("E primo");
-}
+
 
 return 0;
 }

@@ -4,6 +4,19 @@ while*/
 #include <stdio.h>
 
 int main(){
-
+int n, con=0, par=0;
+float res;
+do{
+printf(">> ");
+scanf("%d", &n);
+if(n%2==0){
+    par+=n;
+    con++;
+}
+}while(n!=0);
+par = par-n;
+con--;
+res= (float)par/con;
+printf("%.2f", res);
 return 0;
 }
