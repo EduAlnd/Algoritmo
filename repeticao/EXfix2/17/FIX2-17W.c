@@ -4,6 +4,13 @@ realizar os cálculos.*/
 #include <stdio.h>
 
 int main(){
-
+int n, res=2, con=1;
+printf(">> ");
+scanf("%d", &n);
+while(con<=n){
+printf("2^%d = %d\n",con, res);
+res= res*2;
+con++;
+}
 return 0;
 }

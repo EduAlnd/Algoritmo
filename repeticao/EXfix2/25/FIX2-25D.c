@@ -4,6 +4,14 @@ intervalo, exiba uma mensagem de erro e peça os valores novamente até que ambo
 #include <stdio.h>
 
 int main(){
-
+int idade, peso;
+do{
+printf(">> ");
+scanf("%d", &idade);
+printf(">> ");
+scanf("%d", &peso);
+if((idade<1 || idade>100)|| (peso<30 || peso>150)){ printf("Erro tente novamente\n");}
+}while((idade<1 || idade>100)|| (peso<30 || peso>150));
+printf("Correto");
 return 0;
 }

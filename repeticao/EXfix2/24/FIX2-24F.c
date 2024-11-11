@@ -4,6 +4,14 @@ solicite novamente ambos os números até que eles sejam válidos.*/
 #include <stdio.h>
 
 int main(){
-
+int a, b;
+for(a;a>=b;a){
+printf(">> ");
+scanf("%d", &a);
+printf(">> ");
+scanf("%d", &b);
+if(a>=b){ printf("Erro tente novamente\n");}
+}
+printf("Correto");
 return 0;
 }

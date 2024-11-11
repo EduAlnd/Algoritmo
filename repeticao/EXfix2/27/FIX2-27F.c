@@ -5,6 +5,16 @@ estejam corretas.*/
 #include <stdio.h>
 
 int main(){
-
+int p1=-1,p2=-1, fal=-1;
+for(p1;(p1<0 || p1>10) || (p2<0 || p2>10) || (fal<0);p1){
+printf(">> ");
+scanf("%d", &p1);
+printf(">> ");
+scanf("%d", &p2);
+printf(">> ");
+scanf("%d", &fal);
+if((p1<0 || p1>10) || (p2<0 || p2>10) || (fal<0)){ printf("Erro tente novamente\n");}
+}
+printf("Correto");
 return 0;
 }

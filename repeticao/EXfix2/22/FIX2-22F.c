@@ -5,6 +5,15 @@ pares entre si, realizando o casting necess√°rio para que o resultado seja um n√
 #include <stdio.h>
 
 int main(){
-
+int n;
+float a, res=0;
+for(n=1;n!=0;n){
+printf(">> ");
+scanf("%d", &n);
+printf(">> ");
+scanf("%f", &a);
+res+=(float)n*a;
+}
+printf("%.3f", res);
 return 0;
 }

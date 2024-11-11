@@ -4,6 +4,12 @@ realizar os cálculos.*/
 #include <stdio.h>
 
 int main(){
-
+int n, res=2, con;
+printf(">> ");
+scanf("%d", &n);
+for(con=1;con<=n;con++){
+printf("2^%d = %d\n",con, res);
+res= res*2;
+}
 return 0;
 }

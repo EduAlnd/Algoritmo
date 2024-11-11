@@ -4,6 +4,14 @@ exiba uma mensagem de erro e peça os valores novamente até que ambos estejam c
 #include <stdio.h>
 
 int main(){
-
+int a,b;
+do{
+printf(">> ");
+scanf("%d", &a);
+printf(">> ");
+scanf("%d", &b);
+if((a%5!=0)||(b%5!=0)||(a>=b)){printf("Erro tente novamente\n");}
+}while((a%5!=0)||(b%5!=0)||(a>=b));
+printf("Correto");
 return 0;
 }

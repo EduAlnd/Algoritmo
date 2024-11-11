@@ -4,6 +4,12 @@ while.*/
 #include <stdio.h>
 
 int main(){
-
+int n, aux=1,con;
+printf(">> ");
+scanf("%d", &n);
+for(con=1;con<=n;con++){
+    printf("%d\n", aux);
+    aux=aux*2;
+}
 return 0;
 }

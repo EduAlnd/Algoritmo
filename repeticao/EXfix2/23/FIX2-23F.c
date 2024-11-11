@@ -5,6 +5,13 @@ de conversão: C = 5/9 x (F - 32) */
 #include <stdio.h>
 
 int main(){
-
+int f;
+float c=1;
+for(c=1;f!=0;c){
+printf(">> ");
+scanf("%d", &f);
+c = ((float)f-32)* ((float)5/9);
+printf("c = %.2f\n", c);
+}
 return 0;
 }
