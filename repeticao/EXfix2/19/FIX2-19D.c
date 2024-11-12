@@ -7,7 +7,35 @@ de Armstrong porque (1^3 + 5^3 + 3^3 = 153) e 370  também é um número de Arms
 e elevado a quarta potência.*/
 #include <stdio.h>
 
-int main(){
+int calculo(int num, int quant, int res){
+   if(quant==1){return res;}
+   else{
+    res = res*num;
+    return calculo(num, --quant, res);
+   }
 
+
+}
+int main(){
+int n, i, digito=0, con=0, nAux=0, res=0;
+do{
+    printf(">> ");
+    scanf("%d", &n);
+    if(n<0 || n>9999){printf("Somente numeros positivos e com até 4 digitos\n");}
+}while(n<0 || n>9999);
+
+//con para saber o numero de digitos
+for(i=1;n/i!=0; i=i*10){con++;}
+//Guarda o valor de n
+nAux=n;
+//Verificação
+do{
+digito= nAux%10;
+nAux= nAux/10;
+res+= calculo(digito, con, digito);
+}while(nAux!=0);
+
+if(res==n){printf("E um numero de Armstrong");}
+else{printf("Nao e um numero de Armstrong");}
 return 0;
 }
