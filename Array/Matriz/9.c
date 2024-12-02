@@ -4,8 +4,8 @@ de uma linha da matriz A. Faça o trecho que gera a matriz separado da entrada e
 da saída*/
 
 #include <stdio.h>
-#define lin 2
-#define col 2
+#define lin 3
+#define col 5
 int main() {
 	int mat[lin][col], l, c, i=0, count=0;
 	int somaLinha[lin][col]= {0};
