@@ -8,8 +8,48 @@ o código 0 (zero) para uma mesa ou quando todos os 150 lugares estiverem
 ocupados*/
 
 #include <stdio.h>
-#define max 100
+#define max 30
 int main(){
-
+    int mesa[max], lugar[max]={0}, l, cod=100, busca=0, lCheios=0;
+    for(l=0;l<max;l++){
+        mesa[l]= cod;
+        cod++;
+    }
+    do{
+        do{
+            printf("Qual o codigo da mesa: ");
+            scanf("%d", &busca);
+           
+            if((busca<100 || busca>=max+100)&& busca!=0){
+                printf("Erro: Codigo invalido.\n");
+            }
+        }while((busca<100 || busca>=max+100) && busca!=0);
+        for(l=0;l<max;l++){
+            if(busca == mesa[l]){
+                do{
+                    printf("Quantos lugares: ");
+                    scanf("%d", &lugar[l]);
+                    if(lugar[l]<0 || lugar[l]>5){
+                        printf("Erro: Numero de lugares invalido.\n");
+                    }
+                }while(lugar[l]<0 || lugar[l]>5);
+                printf("A alteracao foi feita com sucesso\n");
+            }
+        }
+        lCheios=0;
+        for(l=0;l<max;l++){
+            if(lugar[l]==5){
+                lCheios++;
+            }
+        }
+         printf("---%d\n", busca);
+    }while(busca!=0 && lCheios != max);
+    printf("Listagem\n");
+    printf("Cod | lugares\n");
+    printf("    |\n");
+     for(l=0;l<max;l++){
+        printf("%d | %.2d\n", mesa[l], lugar[l]);
+    }
+    
     return 0;
 }
