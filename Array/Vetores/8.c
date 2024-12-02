@@ -2,13 +2,13 @@
 e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou
 somente de um ao se digitar o código*/
 #include <stdio.h>
-#define max 30
+#define max 5
 
 int main(){
     int codigo[max];
     int quant[max];
     float compra[max], venda[max];
-    int l, nav, busca, flag, valor = 20, valid, invalid=0, list = 0;
+    int l, nav, busca, flag, valor = 20, valid, invalid=0, list = 0, erro=1;
     // Adiciona valores aos vetores
     for (l = 0; l <= max - 1; l++) {
         codigo[l] = l + 1;
@@ -87,6 +87,7 @@ int main(){
             if (codigo[l] == busca){
                 printf("Codigo: %d | Quant: %d | Valor de compra: %.2f | Valor de venda: %.2f \n", codigo[l], quant[l], compra[l], venda[l]);
                 flag = 0;
+                erro=0;
             }
         }
         if (flag){
@@ -98,7 +99,7 @@ int main(){
         for (l = 0; l <= max - 1; l++)
             printf("Codigo: %.3d | Quant: %.2d | Valor de compra: %.2f | Valor de venda: %.2f \n", codigo[l], quant[l], compra[l], venda[l]);
     }
-    else{
+    else if(erro || nav>=4){
         printf("Erro: Numero invalido");
         return 1;
     }
