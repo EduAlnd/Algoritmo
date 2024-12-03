@@ -7,42 +7,34 @@ programa uma lista das plantas que devem ser adquiridas.
 
 #include <stdio.h>
 
-#define lin 50
+#define lin 5
 #define col 2
 int main() {
 	int estoque[lin][col], l, c, i=0; //estoque = {minimo, atual}
-	char nomes[lin][50];
+	char nomes[lin];
 	printf("Entre com os dados:\n");
 	for(l=0;l<lin;l++){
-			printf("Nome da planta %d: ", l+1);
-		i=0;
-		do{
-			scanf("%c", &nomes[l][i]);
-			if(nomes[l][i]!= 10){
-				i++;
+	printf("Nome da planta %d: ", l+1);
+	scanf("%s", &nomes[l]);
+		for(c=0;c<col;c++){
+			if(c==0){
+			printf("Estoque minimo: ");
+			scanf("%d", &estoque[l][c]);
+
 			}
-		}while(nomes[l][i]!= 10 && i <=49);
-		nomes[l][i] = '\0';
-		i=0;
-		printf("Estoque minimo: ");
-		scanf("%d", &estoque[l][0]);
-		printf("Estoque atual: ");
-		scanf("%d", &estoque[l][1]);
-		getchar();
-		
-	}
-	printf("Plantas que devem ser adquiridas:\n");
-	for(l=0;l<lin;l++){
-		if(estoque[l][0]>estoque[l][1]){
-			do{
-			printf("%c", nomes[l][i]);
-			if(nomes[l][i]!= '\0'){
-				i++;
+			else{
+			printf("Estoque atual: ");
+			scanf("%d", &estoque[l][c]);
 			}
-			}while(nomes[l][i]!= '\0');
 		}
-		i=0;
-		printf("\n");
+	}
+
+	printf("Plantas que devem ser adquiridas:\n");
+	
+	for(l=0;l<lin;l++){
+			if(estoque[l][0]>estoque[l][1]){
+				printf("%s\n", nomes[l]);
+			}
 	}
 
 	return 0;
